@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="empresaModelStoreContainer" CdmEntityContainer="empresaEntities">
+    <EntitySetMapping Name="DespesasEmps">
+      <EntityTypeMapping TypeName="empresaModel.DespesasEmp">
+        <MappingFragment StoreEntitySet="DespesasEmp">
+          <ScalarProperty Name="DespesaId" ColumnName="DespesaId" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Observacao" ColumnName="Observacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReceitasEmps">
+      <EntityTypeMapping TypeName="empresaModel.ReceitasEmp">
+        <MappingFragment StoreEntitySet="ReceitasEmp">
+          <ScalarProperty Name="ReceitaId" ColumnName="ReceitaId" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Observacao" ColumnName="Observacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

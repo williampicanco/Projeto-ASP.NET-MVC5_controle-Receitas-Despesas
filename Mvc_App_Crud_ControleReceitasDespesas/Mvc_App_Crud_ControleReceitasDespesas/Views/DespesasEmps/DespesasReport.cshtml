@@ -1,0 +1,39 @@
+﻿@using ReportViewerForMvc;
+
+@{
+    ViewBag.Title = "DespesasReport";
+}
+
+<body>
+    <h3>Relatório de Despesas</h3>
+   
+    <table cellpadding="2" cellspacing="2" border="1">
+        <tr>
+            <th>DespesaId</th>
+            <th>Categoria</th>
+            <th>Data</th>
+            <th>Observação</th>
+            <th>Valor (R$:)</th>
+        </tr>
+        @foreach (var d in ViewBag.ListDespesas)
+        {
+            <tr>
+                <td>@d.DespesaId</td>
+                <td>@d.Categoria</td>
+                <td>@d.Data</td>
+                <td>@d.Observacao</td>
+                <td>@d.Valor</td>
+            </tr>
+        }
+    </table>
+    <br/>
+    <a href="@Url.Action("GenerateReport", "DespesasEmps")">Exportar relatório em .PDF</a>
+</body>
+<br /><br />
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.ActionLink("Voltar para Listad e Despesas", "Index")
+    </p>
+
+}

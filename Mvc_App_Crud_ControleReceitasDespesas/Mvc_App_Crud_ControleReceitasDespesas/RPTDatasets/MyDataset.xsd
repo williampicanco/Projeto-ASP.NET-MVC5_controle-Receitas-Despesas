@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MyDataset" targetNamespace="http://tempuri.org/MyDataset.xsd" xmlns:mstns="http://tempuri.org/MyDataset.xsd" xmlns="http://tempuri.org/MyDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="empresaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="empresaConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.empresaConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MyDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="MyDataset" msprop:Generator_UserDSName="MyDataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DespesasEmp" msprop:Generator_TableClassName="DespesasEmpDataTable" msprop:Generator_TableVarName="tableDespesasEmp" msprop:Generator_TablePropName="DespesasEmp" msprop:Generator_RowDeletingName="DespesasEmpRowDeleting" msprop:Generator_RowChangingName="DespesasEmpRowChanging" msprop:Generator_RowEvHandlerName="DespesasEmpRowChangeEventHandler" msprop:Generator_RowDeletedName="DespesasEmpRowDeleted" msprop:Generator_UserTableName="DespesasEmp" msprop:Generator_RowChangedName="DespesasEmpRowChanged" msprop:Generator_RowEvArgName="DespesasEmpRowChangeEvent" msprop:Generator_RowClassName="DespesasEmpRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DespesaId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnDespesaId" msprop:Generator_ColumnPropNameInRow="DespesaId" msprop:Generator_ColumnPropNameInTable="DespesaIdColumn" msprop:Generator_UserColumnName="DespesaId" type="xs:int" />
+              <xs:element name="Valor" msprop:Generator_ColumnVarNameInTable="columnValor" msprop:Generator_ColumnPropNameInRow="Valor" msprop:Generator_ColumnPropNameInTable="ValorColumn" msprop:Generator_UserColumnName="Valor" type="xs:double" minOccurs="0" />
+              <xs:element name="Categoria" msprop:Generator_ColumnVarNameInTable="columnCategoria" msprop:Generator_ColumnPropNameInRow="Categoria" msprop:Generator_ColumnPropNameInTable="CategoriaColumn" msprop:Generator_UserColumnName="Categoria" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Data" msprop:Generator_ColumnVarNameInTable="columnData" msprop:Generator_ColumnPropNameInRow="Data" msprop:Generator_ColumnPropNameInTable="DataColumn" msprop:Generator_UserColumnName="Data" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Observacao" msprop:Generator_ColumnVarNameInTable="columnObservacao" msprop:Generator_ColumnPropNameInRow="Observacao" msprop:Generator_ColumnPropNameInTable="ObservacaoColumn" msprop:Generator_UserColumnName="Observacao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ReceitasEmp" msprop:Generator_TableClassName="ReceitasEmpDataTable" msprop:Generator_TableVarName="tableReceitasEmp" msprop:Generator_TablePropName="ReceitasEmp" msprop:Generator_RowDeletingName="ReceitasEmpRowDeleting" msprop:Generator_RowChangingName="ReceitasEmpRowChanging" msprop:Generator_RowEvHandlerName="ReceitasEmpRowChangeEventHandler" msprop:Generator_RowDeletedName="ReceitasEmpRowDeleted" msprop:Generator_UserTableName="ReceitasEmp" msprop:Generator_RowChangedName="ReceitasEmpRowChanged" msprop:Generator_RowEvArgName="ReceitasEmpRowChangeEvent" msprop:Generator_RowClassName="ReceitasEmpRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ReceitaId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnReceitaId" msprop:Generator_ColumnPropNameInRow="ReceitaId" msprop:Generator_ColumnPropNameInTable="ReceitaIdColumn" msprop:Generator_UserColumnName="ReceitaId" type="xs:int" />
+              <xs:element name="Valor" msprop:Generator_ColumnVarNameInTable="columnValor" msprop:Generator_ColumnPropNameInRow="Valor" msprop:Generator_ColumnPropNameInTable="ValorColumn" msprop:Generator_UserColumnName="Valor" type="xs:double" minOccurs="0" />
+              <xs:element name="Categoria" msprop:Generator_ColumnVarNameInTable="columnCategoria" msprop:Generator_ColumnPropNameInRow="Categoria" msprop:Generator_ColumnPropNameInTable="CategoriaColumn" msprop:Generator_UserColumnName="Categoria" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Data" msprop:Generator_ColumnVarNameInTable="columnData" msprop:Generator_ColumnPropNameInRow="Data" msprop:Generator_ColumnPropNameInTable="DataColumn" msprop:Generator_UserColumnName="Data" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Observacao" msprop:Generator_ColumnVarNameInTable="columnObservacao" msprop:Generator_ColumnPropNameInRow="Observacao" msprop:Generator_ColumnPropNameInTable="ObservacaoColumn" msprop:Generator_UserColumnName="Observacao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DespesasEmp" />
+      <xs:field xpath="mstns:DespesaId" />
+    </xs:unique>
+    <xs:unique name="ReceitasEmp_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ReceitasEmp" />
+      <xs:field xpath="mstns:ReceitaId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

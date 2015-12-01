@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Mvc_App_Crud_ControleReceitasDespesas.Models.DespesasEmp>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Nova Despesa", "Create")
+</p>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Busque por Data ou Categoria : @Html.TextBox("SearchString")
+        <input type="submit" value="Buscar" />
+    </p>
+   
+}
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Valor)
+            </th>
+            <th>
+                @Html.ActionLink("Categoria", "Index", new { sortOrder = ViewBag.CategoriaOrdenacaoParam })
+            </th>
+            <th>
+                @Html.ActionLink("Data", "Index", new { sortOrder = ViewBag.DateOrdenacaoParam })             
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Observacao)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Valor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Categoria)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Data)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Observacao)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.DespesaId }) |
+                    @Html.ActionLink("Detalhes", "Details", new { id = item.DespesaId }) |
+                    @Html.ActionLink("Excluir", "Delete", new { id = item.DespesaId })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+@using (Html.BeginForm())
+{
+    <p>              
+       @Html.ActionLink("Ver Relatório de Despesas", "DespesasReport")
+    </p>
+   
+}
+

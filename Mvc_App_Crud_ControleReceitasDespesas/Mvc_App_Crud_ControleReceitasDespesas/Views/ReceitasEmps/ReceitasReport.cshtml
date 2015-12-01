@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Mvc_App_Crud_ControleReceitasDespesas.Models.ReceitasEmp>
+
+@{
+    ViewBag.Title = "ReceitasReport";
+}
+
+<body>
+    <h3>Relatório de Receitas</h3>
+
+    <table cellpadding="2" cellspacing="2" border="1">
+        <tr>
+            <th>ReceitaId</th>
+            <th>Categoria</th>
+            <th>Data</th>
+            <th>Observação</th>
+            <th>Valor (R$:)</th>
+        </tr>
+        @foreach (var r in ViewBag.ListReceitas)
+        {
+            <tr>
+                <td>@r.ReceitaId</td>          
+                <td>@r.Categoria</td>
+                <td>@r.Data</td>
+                <td>@r.Observacao</td>
+                <td>@r.Valor</td>
+            </tr>
+        }
+    </table>
+    <br />
+    <a href="@Url.Action("GenerateReport", "ReceitasEmps")">Exportar relatório em .PDF</a>
+</body>
+<br /><br />
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.ActionLink("Voltar para Lista de Receitas", "Index")
+    </p>
+
+}
